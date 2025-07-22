@@ -1,8 +1,12 @@
 import logging
 from datetime import datetime, timedelta
 from collections import defaultdict
+from dotenv import load_dotenv
+import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, MessageHandler, filters
+
+load_dotenv(dotenv_path='pet1.env')
 
 # Настройка логирования
 logging.basicConfig(
